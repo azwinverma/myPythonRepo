@@ -12,22 +12,10 @@ BASE_PATH = Path(BASE_DIR)
 
 # --- Core ---
 SECRET_KEY = 'y4ka54!j57u^lezm1wj_-g#!v9zoz77wgo=+!-e=6ry1q6o#51'
-<<<<<<< HEAD
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['aswiniverma.pythonanywhere.com']
-
-
-# Application definition
-
-=======
 DEBUG = True
 ALLOWED_HOSTS = ["*"]  # tighten for prod (e.g., ["your-domain.com"])
 
 # --- Apps ---
->>>>>>> 082c65e9be5fddec8e075d95255208117070c432
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
