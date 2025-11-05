@@ -1,3 +1,4 @@
+#python -m pyflakes pyshop/settings.py 2>/dev/null || true
 """
 Django settings for pyshop project.
 Updated for media uploads + DRF + CORS (Django 2.1-compatible).
@@ -13,7 +14,9 @@ BASE_PATH = Path(BASE_DIR)
 # --- Core ---
 SECRET_KEY = 'y4ka54!j57u^lezm1wj_-g#!v9zoz77wgo=+!-e=6ry1q6o#51'
 DEBUG = True
-ALLOWED_HOSTS = ["*"]  # tighten for prod (e.g., ["your-domain.com"])
+#ALLOWED_HOSTS = ["*"]  # tighten for prod (e.g., ["your-domain.com"])
+ALLOWED_HOSTS = ["aswiniverma.pythonanywhere.com", "www.aswiniverma.pythonanywhere.com"]
+
 
 # --- Apps ---
 INSTALLED_APPS = [
@@ -31,6 +34,7 @@ INSTALLED_APPS = [
     # local
     'product.apps.ProductConfig',
     'library',
+
 ]
 
 # --- Middleware ---

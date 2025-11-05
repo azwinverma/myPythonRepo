@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
 
+def home(_):
+    return HttpResponse("It works on PythonAnywhere!")
 
 urlpatterns = [
+    path("", home),
     path('admin/', admin.site.urls),
     path('product/', include('product.urls')),
     path("api/", include("library.urls")),
