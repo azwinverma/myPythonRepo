@@ -4,7 +4,7 @@ import time
 import requests
 from typing import List, Dict, Tuple
 
-HF_TOKEN = "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"
+HF_TOKEN = (os.getenv("HF_TOKEN") or "").strip()
 
 DEFAULT_STYLES: Dict[str, str] = {
     "friendly": "Warm, friendly, short. 1–2 sentences.",
