@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_PATH = Path(BASE_DIR)
 
 # --- Core ---
-SECRET_KEY = ''
+SECRET_KEY = 'y4ka54!j57u^lezm1wj_-g#!v9zoz77wgo=+!-e=6ry1q6o#51'
 DEBUG = False
 
 #ALLOWED_HOSTS = ["*"]  # tighten for prod (e.g., ["your-domain.com"])
