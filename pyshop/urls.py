@@ -27,8 +27,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/', include('product.urls')),
     path("api/", include("library.urls")),
+    path("api/captions/", include("captions.urls")),
+
 
 ]
 # Serve media files in dev
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+

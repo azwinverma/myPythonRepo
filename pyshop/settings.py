@@ -13,9 +13,10 @@ BASE_PATH = Path(BASE_DIR)
 
 # --- Core ---
 SECRET_KEY = 'y4ka54!j57u^lezm1wj_-g#!v9zoz77wgo=+!-e=6ry1q6o#51'
-DEBUG = True
+DEBUG = False
+
 #ALLOWED_HOSTS = ["*"]  # tighten for prod (e.g., ["your-domain.com"])
-ALLOWED_HOSTS = ["aswiniverma.pythonanywhere.com", "www.aswiniverma.pythonanywhere.com"]
+ALLOWED_HOSTS = ["aswiniverma.pythonanywhere.com", "www.aswiniverma.pythonanywhere.com","127.0.0.1"]
 
 
 # --- Apps ---
@@ -34,6 +35,8 @@ INSTALLED_APPS = [
     # local
     'product.apps.ProductConfig',
     'library',
+    'captions',           # <-- new app
+
 
 ]
 
@@ -109,6 +112,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
+    "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
+    "DEFAULT_PARSER_CLASSES": ["rest_framework.parsers.JSONParser"],
 }
 
 # --- CORS (open for dev; restrict origins in prod) ---
